@@ -1,0 +1,79 @@
+﻿@model MyTourManagementMVC.Models.TourPackageDetails
+
+@{
+    ViewData["Title"] = "Create";
+}
+<html>
+<head>
+    <style>
+        body {
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>BonVoyage Exploria</h1>
+
+<h4>Add Tour Package Details</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+         
+            <div class="form-group">
+                <label asp-for="TourName" class="control-label"></label>
+                <input asp-for="TourName" class="form-control" />
+                <span asp-validation-for="TourName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Itinerary" class="control-label"></label>
+                <input asp-for="Itinerary" class="form-control" />
+                <span asp-validation-for="Itinerary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartingDate" class="control-label"></label>
+                <input asp-for="StartingDate" class="form-control" />
+                <span asp-validation-for="StartingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndingDate" class="control-label"></label>
+                <input asp-for="EndingDate" class="form-control" />
+                <span asp-validation-for="EndingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tourimagepath" class="control-label"></label>
+                <input asp-for="tourimagepath" class="form-control" />
+                <span asp-validation-for="tourimagepath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Departurepoint" class="control-label"></label>
+                <input asp-for="Departurepoint" class="form-control" />
+                <span asp-validation-for="Departurepoint" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AgencyId" class="control-label"></label>
+                <input asp-for="AgencyId" class="form-control" />
+                <span asp-validation-for="AgencyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<br />
+    <input type="button" value="Back To Admin" id="mainbtn" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Admin")'" />
+
+<div>
+    <a asp-action="Index">Display All Tour Packages</a>
+</div>
+</body>
+</html>

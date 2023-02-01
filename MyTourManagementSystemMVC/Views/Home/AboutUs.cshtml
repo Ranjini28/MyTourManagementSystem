@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+        <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            color:darkblue;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: skyblue;
+            color: darkblue
+            
+        }
+         #btn{
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin:20px;
+        }
+        h2{
+            text-align:center;
+        }
+        p{
+            text-align:center;
+        }
+
+        </style>
+    </head>
+    <body>
+<div class="about-section">
+    <h1>About Us Page</h1>
+    <p>Explore Various Tour Packages!!</p>
+   
+</div>
+
+
+
+    
+        <div class="card"> 
+            <div class="container">
+            <h2 style="text-align:center">Our Team</h2>
+                <h2>Bon Voyage Exploria</h2>
+                <p class="title">Our Core Competencies</p>
+                <p>We make Trip booking Easier and faster by providing Online Services ! Enjoy booking and Happy travelling !</p>
+  
+            </div>
+      
+   
+        <input type="button" id="btn" value="Back to Home" onclick="location.href='@Url.Action("Index", "Home")'" />
+
+   </div>
+   </body>
+</html>

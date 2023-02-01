@@ -1,0 +1,63 @@
+﻿@model MyTourManagementMVC.Models.TravelAgencyDetails
+
+@{
+    ViewData["Title"] = "Details";
+}
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid;
+        }
+        table{
+            border-collapse: collapse;
+            border: 1px solid;
+        }
+        tr:hover {background-color: coral;}
+    </style>
+</head>
+<body>
+<h1>Details</h1>
+
+<div>
+    <h4>TravelAgencyDetails</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AgencyId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AgencyId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AgencyName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AgencyName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.accomodation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.accomodation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TravelMode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TravelMode)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Details" asp-controller="TourPackage">Back</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<MyTourManagementMVC.Models.TourPackageDetails>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid;
+        }
+        table{
+            border-collapse: collapse;
+            border: 1px solid;
+        }
+        tr:hover {background-color: coral;}
+    </style>
+</head>
+<body>
+
+<h1>All Tour Package Details </h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TourId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TourName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Itinerary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndingDate)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Departurepoint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgencyId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TourId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TourName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Itinerary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndingDate)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Departurepoint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgencyId)
+            </td>
+            <td>
+               
+                @Html.ActionLink("Details", "Details", new {  id=item.TourId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.TourId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+</body>
+<input type="button" value="Back To Home" id="mainbtn" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Home")'" />
+</html>

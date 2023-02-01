@@ -1,0 +1,92 @@
+﻿@model MyTourManagementMVC.Models.TourPackageDetails
+
+@{
+    ViewData["Title"] = "Details";
+}
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px solid;
+        }
+
+        tr:hover {
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+<h1>Details</h1>
+
+<div>
+    <h4>TourPackageDetails</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TourId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TourId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TourName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TourName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Itinerary)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Itinerary)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartingDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartingDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EndingDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EndingDate)
+        </dd>
+    
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Departurepoint)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Departurepoint)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AgencyId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AgencyId)
+        </dd>
+       
+    </dl>
+</div>
+<div>
+    
+    <input type="button" value="Show Travel Agency Details " onclick="location.href='@Url.Action("Index", "TravelAgency")'" />
+    <br />
+    <br />
+    <input type="button" value="Book Package " onclick="location.href='@Url.Action("Create", "Booking")'" />
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

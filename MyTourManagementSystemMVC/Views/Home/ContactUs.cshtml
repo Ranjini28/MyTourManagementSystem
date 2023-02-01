@@ -1,0 +1,84 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+   
+  <style>
+      body{
+  min-height: 100vh;
+  width: 100%;
+  background: #c8e8e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+}
+.container{
+  width: 85%;
+  background:skyblue;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  color:midnightblue;
+  text-align:center;
+  font-weight:bold;
+}
+.container .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#btn{
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin:20px;
+        }
+
+
+
+  </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    
+    <div class="container">
+        <h1 style="text-align:center"> Contact Us</h1>
+        <div class="content">
+            
+                <div class="address details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="topic">Address</div>
+                    <div class="text-one">Mindtree</div>
+                    <div class="text-two">Global Village</div>
+                </div>
+                <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">Phone</div>
+                    <div class="text-one">98152791</div>
+                    <div class="text-two">026829711</div>
+                </div>
+                <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">Email</div>
+                    <div class="text-one">BonExploria@gmail.com</div>
+                    <div class="text-two">amigos23@gmail.</div>
+                </div>
+            <input type="button" id="btn" value="Back to Home" onclick="location.href='@Url.Action("Index", "Home")'" />
+            </div>
+            </div>
+        
+</body>
+</html>

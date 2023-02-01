@@ -1,0 +1,68 @@
+﻿@model IEnumerable<MyTourManagementMVC.Models.TravelAgencyDetails>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<html>
+    <head>
+<style>
+        table, th, td {
+            border: 1px solid;
+        }
+</style>
+    </head>
+    <body>
+
+    
+<h1>All Travel Agency Details </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AgencyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgencyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.accomodation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TravelMode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgencyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgencyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.accomodation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TravelMode)
+            </td>
+            <td>
+              
+                @Html.ActionLink("Details", "Details", new { id=item.AgencyId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.AgencyId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

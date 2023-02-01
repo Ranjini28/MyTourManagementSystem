@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+        <style>
+        #btn{
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin:20px;
+        }
+
+        h1 {
+            color: darkblue;
+            background: lightskyblue;
+            font-size: 25px;
+            align-content: center;
+        }
+        div{
+            align-content:center;
+        }
+        body{
+            background-image:url(/Images/admin3.jpg);
+            background-size:cover;
+        }
+
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center">ADMIN PRIVILEGES </h1>
+        <div>
+            <input type="button" id="btn" value="Add Travel Agency" onclick="location.href='@Url.Action("Create", "TravelAgency")'" />
+    <input type="button" id="btn"  value="Add Tour Package" onclick="location.href='@Url.Action("Create", "TourPackage")'" />
+    <input type="button" id="btn"  value="View All Users" onclick="location.href='@Url.Action("Index", "User")'" />
+        <input type="button" value="Back To Home" id="btn" class="btn btn-primary" onclick="location.href='@Url.Action("Index", "Home")'" />
+   
+        </div>
+     </body>
+</html>

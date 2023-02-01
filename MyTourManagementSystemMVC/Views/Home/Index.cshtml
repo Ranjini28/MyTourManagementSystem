@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<html>
+    <head>
+        <style> 
+          
+            h1{
+                font-weight:bolder;
+                font-size:40px;
+                color:darkblue;
+                background:lightskyblue;
+
+            }
+            p{
+                color:darkblue;
+                background:lightskyblue;
+                font-size:25px;
+                align-content:center;
+            }
+           
+
+        .row {
+            display: flex;
+            
+        }
+
+        .column {
+            flex: 33.33%;
+            padding: 10px;
+
+            
+        }
+
+        #UpperBar {
+            background-color: skyblue;
+            font-size: 20px;
+            align-self: center;
+            color: midnightblue;
+        }
+        #link{
+            background-color:deepskyblue;
+            border:double;
+            text-decoration-color:white;
+        }
+
+       
+            
+        </style>
+    </head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="UpperBar">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TourPackage" asp-action="Index" id="link">Explore Tour Packages</a>
+                        </li>
+                        <li class="nav-item" id="hover">
+                            <a class="nav-link text-dark" asp-action="ContactUs" id="link">Contact Us</a>
+                        </li>
+                        <li class="nav-item" id="hover">
+                            <a class="nav-link text-dark" asp-area="" asp-action="AboutUs" id="link">About Us</a>
+                        </li>
+                        <li class="nav-item" id="hover">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Create" id="link">Login/Register</a>
+                        </li>
+                        <li class="nav-item" id="hover">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AdminLogin" id="link">Admin</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </nav>
+    </header>
+   
+
+        <p style="text-align:center"> Welcome To Bon Voyage Exploria!!</p>
+       
+    <div class="row">
+        <div class="column">
+            <img src="~/Images/imag3.jpg" alt="quote1" height="500px" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="~/Images/travel.jpg" alt="quote2" height="500px" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="~/Images/journey.jpg" alt="quote3" height="500px" style="width:100%">
+        </div>
+    </div>
+</body>
+</html>
